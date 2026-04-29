@@ -12,7 +12,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<div id="successPopup" class="popup">
+  <div class="popup-box">
+    <p>Tụi mình đã nhận được dữ liệu rồi 💌</p>
+    <p>Tụi mình sẽ liên lạc khi cần thêm thông tin nhé.</p>
+  </div>
+</div>
 
+
+
+
+  
 <body>
 
 <div class="music-btn" onclick="toggleMusic()">♫</div>
@@ -263,8 +273,25 @@ document.getElementById("rsvpForm").addEventListener("submit", async function(e)
       body: JSON.stringify(data)
     });
 
-    alert("Tụi mình đã nhận được dữ liệu rồi, tụi mình sẽ liên lạc khi cần thêm thông tin nhé 💌");
 
+
+    
+    document.getElementById("successPopup").style.display = "flex";
+
+setTimeout(() => {
+  document.getElementById("successPopup").style.display = "none";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}, 5000);
+
+
+
+
+
+    
     document.getElementById("rsvpForm").reset();
     document.getElementById("pickupLocation").style.display = "none";
     window.scrollTo({
@@ -281,6 +308,12 @@ document.getElementById("rsvpForm").addEventListener("submit", async function(e)
 });
 </script>
 
+  <script>
+    document.body.addEventListener("click", function() {
+  const music = document.getElementById("bgMusic");
+  music.play();
+}, { once: true });
+  </script>
 
 </body>
 </html>
