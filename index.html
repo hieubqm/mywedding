@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiếu & Nguyên Wedding</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="music-btn" onclick="toggleMusic()">♫</div>
+<audio id="bgMusic" loop>
+  <source src="music/wedding.mp3" type="audio/mp3">
+</audio>
+
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <p class="subtitle">Wedding Invitation</p>
+    <h1>Hiếu & Nguyên</h1>
+    <p class="date">21.06.2026</p>
+  </div>
+</section>
+
+<section class="story">
+
+
+  <div class="story-grid">
+    <div>
+      <h2>Xin chào</h2>
+    <h2>Đây là tấm thiệp cưới đong đầy yêu thương của chúng mình</h2>
+    <h2>Khi bạn đọc được những dòng này, điều đó có nghĩa ~  </h2>  
+    <h2>Tiệc cưới của chúng mình đã rất gần rồi </h2>
+       
+    </div>
+
+    <div>
+      <h2>Chúng mình</h2>
+       <h2>Đã quyết định nắm tay nhau </h2>
+        <h2>Cùng nhau bước sang một chặng đường mới</h2>
+        <h2>Trở thành người quan trọng nhất trong đời của nhau. </h2>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery">
+  <h3>Thư viện của tụi mình</h3>
+
+  <div class="gallery-grid">
+    <img src="images/gallery1.jpg">
+    <img src="images/gallery2.jpg">
+    <img src="images/gallery3.jpg">
+    <img src="images/gallery4.jpg">
+  </div>
+</section>
+
+<section class="countdown-section" id="countdown">
+  <h2>Chỉ còn</h2>
+  <div id="countdown-box"></div>
+  
+
+</section>
+
+<section class="calendar-section">
+
+  <div class="calendar">
+    <div class="month">Tháng 6 - 2026</div>
+
+    <div class="days-name">
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+      <span>Sun</span>
+    </div>
+
+    <div class="days">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+      <span>10</span>
+      <span>11</span>
+      <span>12</span>
+      <span>13</span>
+      <span>14</span>
+      <span>15</span>
+      <span>16</span>
+      <span>17</span>
+      <span>18</span>
+      <span>19</span>
+      <span>20</span>
+
+ <span class="heart-day">
+  <img src="images/heart.png" alt="">
+  <span class="day-number">21</span>
+</span>
+
+      <span>22</span>
+      <span>23</span>
+      <span>24</span>
+      <span>25</span>
+      <span>26</span>
+      <span>27</span>
+      <span>28</span>
+      <span>29</span>
+      <span>30</span>
+    </div>
+  </div>
+</section>
+
+<section class="event">
+  <h3>Hân hoan kính mời dự tiệc và chung vui với chúng mình  </h3>
+
+  <div class="event-box">
+    <div>
+      <p><span class="highlight-red">11:00 AM</span></p>
+      <p>Chủ Nhật, ngày 21 tháng 6 năm 2026</p>
+    </div>
+
+    <div>
+     
+      <p>Tổ chức tại <span class="highlight-red">Tư Gia</span></p>
+      <p>Thoại Hương - Xuân Đông - Đồng Nai</p>
+    </div>
+
+
+  </div>
+
+
+<div class="map-box" onclick="window.open('https://maps.app.goo.gl/VFKJSDbTHLRh3jgV6', '_blank')">
+   <span class="map-label">Mở GG Map</span>
+    <img src="images/map.jpg" alt="Map Preview">
+  
+  
+</div>
+
+<style>
+.map-box {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+       margin-top: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-inline: auto;
+}
+
+.map-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.9);
+    padding: 20px 64px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: #4d4d4d;
+    z-index: 2;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.map-box:hover {
+    transform: scale(1.01);
+}
+
+.map-box img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+</style>
+
+
+
+<section class="rsvp">
+  <h2>Xác nhận tham dự</h2>
+  <p>Chúng mình có chuẩn bị xe đón ở </p>
+  <p>    Ngã Tư Thủ Đức - Ngã Tư Vũng Tàu - Ngã 3 Thái Lan - BV Long Thành </p>
+  <p>Các bạn đăng ký xe đưa rước thì chọn bên dưới nhé</p>
+
+  <form id="rsvpForm">
+    <input type="text" placeholder="Họ và Tên của bạn">
+    <input type="text" placeholder="Số điện thoại">
+    <input type="number" placeholder="Số người tham dự">
+
+    <select id="busOption">
+      <option value="">Có đi xe đưa rước không?</option>
+      <option value="yes">Có</option>
+      <option value="no">Không</option>
+    </select>
+
+    <div id="pickupLocation" style="display:none;">
+      <input type="text" placeholder="Vị trí đón">
+    </div>
+
+    <textarea placeholder="Lời chúc mừng"></textarea>
+
+    <button type="submit" id="submitBtn">Gửi</button>
+  </form>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const busOption = document.getElementById("busOption");
+  const pickupLocation = document.getElementById("pickupLocation");
+
+  busOption.addEventListener("change", function () {
+    pickupLocation.style.display = this.value === "yes" ? "block" : "none";
+  });
+
+});
+</script>
+
+
+
+<script src="script.js"></script>
+
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Đang gửi...";
+
+  const data = {
+    name: document.querySelector('input[placeholder="Họ và Tên của bạn"]').value,
+    phone: document.querySelector('input[placeholder="Số điện thoại"]').value,
+    people: document.querySelector('input[type="number"]').value,
+    bus: document.getElementById('busOption').value,
+    pickup: document.querySelector('#pickupLocation input')?.value || "",
+    message: document.querySelector('textarea').value
+  };
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbyX3zxRHs9KkJcRfqoXLfPDjGZrGOISQKp4js4LBbKpwjjad_wrrhyaeX1UD0s2djhh/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    alert("Tụi mình đã nhận được dữ liệu rồi, tụi mình sẽ liên lạc khi cần thêm thông tin nhé 💌");
+
+    document.getElementById("rsvpForm").reset();
+    document.getElementById("pickupLocation").style.display = "none";
+    window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+
+  } catch(error) {
+    console.error(error);
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.innerText = "Gửi";
+});
+</script>
+
+
+</body>
+</html>
