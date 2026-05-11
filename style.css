@@ -299,7 +299,6 @@ button {
   font-weight: 800;
 }
 
-
 .popup {
   position: fixed;
   inset: 0;
@@ -310,6 +309,8 @@ button {
   z-index: 9999;
 }
 
+.popup.show { display: flex; }
+
 .popup-box {
   background: white;
   padding: 30px;
@@ -319,7 +320,6 @@ button {
   width: 90%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
 
 @media(max-width:768px){
 
